@@ -26,22 +26,31 @@ public class Waehrung {
         this.kuerzel = kuerzel;
     }
 
-    // TODO: JavaDoc
+    // TODO: JavaDoc 
+/**
+ * 
+ * @param betrag
+ * @param toWaehrung
+ * @return
+ */
     public long umrechnen(long betrag, Waehrung toWaehrung) {
         return betrag * kurs / toWaehrung.kurs;
     }
 
     // TODO: JavaDoc
+//    to return the cost of the currency
     public int getKurs() {
         return kurs;
     }
     
     // TODO: JavaDoc
+//    to get the name of the currency
     public String getName() {
         return name;
     }
 
     // TODO: JavaDoc
+//    to return the 
     public String getKuerzel() {
         return kuerzel;
     }
