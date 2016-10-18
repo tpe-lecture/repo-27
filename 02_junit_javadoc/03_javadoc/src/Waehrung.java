@@ -1,16 +1,21 @@
 // TODO: JavaDoc
+//the class Waehrung
 public class Waehrung {
 
     // TODO: JavaDoc
+//    the cost of the exchange
     private final int kurs;
 
     // TODO: JavaDoc
+//    the name of the currency
     private final String name;
 
     // TODO: JavaDoc
+//    the abbreviation
     private final String kuerzel;
 
     // TODO: JavaDoc
+//    the change to dollar
     private static final long TEILER = 10000;
 
     /**
@@ -26,12 +31,12 @@ public class Waehrung {
         this.kuerzel = kuerzel;
     }
 
-    // TODO: JavaDoc 
+    // TODO: JavaDoc
 /**
- * 
- * @param betrag
- * @param toWaehrung
- * @return
+ * @param the amount
+ * @author toWaehrung
+ * @param the Currency
+ * @return the converted currency
  */
     public long umrechnen(long betrag, Waehrung toWaehrung) {
         return betrag * kurs / toWaehrung.kurs;
@@ -42,7 +47,7 @@ public class Waehrung {
     public int getKurs() {
         return kurs;
     }
-    
+
     // TODO: JavaDoc
 //    to get the name of the currency
     public String getName() {
@@ -50,7 +55,7 @@ public class Waehrung {
     }
 
     // TODO: JavaDoc
-//    to return the 
+//    to return the abbreviation
     public String getKuerzel() {
         return kuerzel;
     }
