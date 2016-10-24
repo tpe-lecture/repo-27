@@ -7,15 +7,16 @@ import tpe.oo.polymorphie.tiere.ZooTier;
  */
 public class Futterstelle {
 
-    public void gibFutter(ZooTier zootier){
+    /**
+     * Füttert den Affen.
+     *
+     * @param zootier, von der Zoo
+     */
+
+    public void gibFutter(ZooTier zootier) {
         zootier.fuettern();
     }
 
-//    /**
-//     * Füttert den Affen.
-//     *
-//     * @param affe Affe, der gefüttert werden soll.
-//     */
 //    public void gibFutter(Affe affe) {
 //        affe.fuettern();
 //    }

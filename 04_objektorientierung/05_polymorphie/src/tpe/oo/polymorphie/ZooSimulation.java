@@ -26,29 +26,29 @@ public final class ZooSimulation {
     public static void main(String[] args) {
         Futterstelle futterstelle = new Futterstelle();
 
-        ZooTier[] tiere = new ZooTier [3];
+        ZooTier[] tiere = new ZooTier[3];
         int i = 0;
         tiere[i++] = new Affe("Charlie");
         tiere[i++] = new Gorilla("Buck");
         tiere[i++] = new Giraffe("Debbie");
 
-        for (ZooTier tier: tiere ){
-        System.out.println(tier);
+        for (ZooTier tier: tiere) {
+            System.out.println(tier);
         }
 
         System.out.println("Fütterung...");
 
-        for (ZooTier tier: tiere ){
+        for (ZooTier tier: tiere) {
             futterstelle.gibFutter(tier);
-            }
+        }
 //
 //        futterstelle.gibFutter(tiere[1]);
 //        futterstelle.gibFutter(tiere[2]);
 //        futterstelle.gibFutter(tiere[3]);
 //
-        for (ZooTier tier: tiere ){
+        for (ZooTier tier: tiere) {
             System.out.println(tier);
-            }
+        }
 
     }
 }
