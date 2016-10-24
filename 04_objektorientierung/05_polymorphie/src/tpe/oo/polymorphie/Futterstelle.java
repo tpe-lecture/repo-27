@@ -10,9 +10,8 @@ public class Futterstelle {
     /**
      * Füttert den Affen.
      *
-     * @param zootier, von der Zoo
+     * @param zootier von der Zoo
      */
-
     public void gibFutter(ZooTier zootier) {
         zootier.fuettern();
     }
