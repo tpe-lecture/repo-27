@@ -14,7 +14,7 @@ public final class ZooSimulation {
      * Konstruktor.
      */
     private ZooSimulation() {
-        // keine Objekte benötigt khkhk
+        // keine Objekte benötigt khkhkjugukg
     }
 
     /**
