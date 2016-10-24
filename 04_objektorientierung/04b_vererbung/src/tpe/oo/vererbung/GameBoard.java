@@ -37,7 +37,7 @@ public class GameBoard extends Board {
         background = ImageBase.loadImage("assets/background");
 
         // TODO: Alien und Asteroid anlegen und positionieren
-        alien = new AlienSprite(this,new Point(60,800));
+        alien = new AlienSprite(this,new Point(500,80));
         asteroid = new Asteroid(this,new Point(100, 100));
     }
 
@@ -56,8 +56,9 @@ public class GameBoard extends Board {
      */
     public void drawGame(Graphics g) {
         // TODO: Alle Objekte zeichnen
-        alien.draw(g);
         asteroid.draw(g);
+        alien.draw(g);
+
     }
 
     /**
