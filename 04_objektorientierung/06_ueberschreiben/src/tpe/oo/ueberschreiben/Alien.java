@@ -38,4 +38,11 @@ public class Alien extends AnimatedSprite {
                 new StripedImage("assets/explosion_1.png", 43)));
         setInvisibleAfterFrames(70);
     }
+
+    /**
+     * Alien explodiert so bald der angefasst wird.
+     */
+    public void mousePressed() {
+        explode();
+    }
 }

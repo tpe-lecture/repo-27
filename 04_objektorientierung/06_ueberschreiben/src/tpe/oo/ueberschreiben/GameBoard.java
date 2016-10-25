@@ -35,7 +35,7 @@ public class GameBoard extends Board {
      */
     @Override
     public void drawGame(Graphics g) {
-        // Alien zeichnen
+        // Alien zeichnen.
         alien.draw(g, this);
     }
 
