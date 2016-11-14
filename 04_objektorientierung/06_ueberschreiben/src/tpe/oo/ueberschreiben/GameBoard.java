@@ -47,4 +47,10 @@ public class GameBoard extends Board {
         alien.move();
         return alien.isVisible();
     }
+    /**
+     * method to print out " the game is over".
+     */
+    public void drawGameOver() {
+        System.out.println("Das Spiel ist aus");
+    }
 }
