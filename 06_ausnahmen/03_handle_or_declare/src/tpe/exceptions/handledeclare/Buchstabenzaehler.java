@@ -121,3 +121,4 @@ public class Buchstabenzaehler {
         return statistik;
     }
 }
+//TestPush
