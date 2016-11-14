@@ -40,7 +40,17 @@ public final class Zahlenraten {
 
         while (true) {
             System.out.print("Bitte geben Sie eine Zahl ein: ");
-            int geraten  = Integer.parseInt(readNumber());
+
+            int geraten = 0; // this variable has to be initialized here
+            try {
+                geraten = Integer.parseInt(readNumber()); // this
+//                statement must be here
+            }
+            catch (NumberFormatException ex) {
+                System.out.printf("falsche Eingabe! "
+                        + "versuchen Sie es noch mal , ");
+                continue;
+            }
             versuche++;
 
             if (geraten < zahl) {
