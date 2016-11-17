@@ -1,7 +1,6 @@
 package tpe.oo.metropolis;
 
-public abstract class Unternehmen extends Metropolis {
-    protected int gewinn;
+public abstract class Unternehmen implements Gewerbesteuerpflichtig {
+    protected double gewinn;
     protected String name;
-
 }

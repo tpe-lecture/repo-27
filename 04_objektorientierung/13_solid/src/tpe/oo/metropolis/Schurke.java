@@ -1,30 +1,55 @@
 package tpe.oo.metropolis;
 
-public class Schurke extends Mutanten {
-    private String mutation;
-    private String schwäche;
+public class Schurke extends Mutant implements Einkommensteuerpflichtig, Steuerpflichtig {
+    protected Superkraft schwaeche;
 
-    public Schurke(String name, double einkommen ,String schwäche ,String mutation) {
-        super(name, einkommen, schwäche);
-        this.mutation = mutation;
+    public Schurke(String name, double einkommen, String mutation,
+            Superkraft schwaeche) {
+        super(name, einkommen, mutation);
+        this.schwaeche = schwaeche;
     }
 
-    public String getMutation() {
-        return this.mutation;
-    }
+    public double einkommensteuer() {
+        double ohneAbzug = 0;
+        if (einkommen <= 20000) {
+            ohneAbzug = einkommen;
+            einkommen = ohneAbzug * 0.92;
+            return ohneAbzug * STEUERSATZ1;
+        }
+        else if (einkommen > 20000 && einkommen <= 40000) {
+            ohneAbzug = einkommen;
+            einkommen = ohneAbzug - ((20000 * STEUERSATZ1)
+                    + ((ohneAbzug - 20000) * STEUERSATZ2));
+            return (20000 * STEUERSATZ1) + ((ohneAbzug - 20000) * STEUERSATZ2);
 
-    public void setSchwäche(String schwäche) {
-        this.schwäche = schwäche;
+        }
+       else if (einkommen > 40000 && einkommen <= 60000) {
+            ohneAbzug = einkommen;
+            einkommen = ohneAbzug
+                    - ((20000 * STEUERSATZ1) + (20000 * STEUERSATZ2)
+                            + ((ohneAbzug - 40000) * STEUERSATZ3));
+            return ((20000 * STEUERSATZ1) + (20000 * STEUERSATZ2)
+                    + ((ohneAbzug - 40000) * STEUERSATZ3));
+        }
+        else {
+            ohneAbzug = einkommen;
+            einkommen = ohneAbzug - ((20000 * STEUERSATZ1)
+                    + (20000 * STEUERSATZ2) + (20000 * STEUERSATZ3)
+                    + ((ohneAbzug - 60000) * 0.4));
+            return ((20000 * STEUERSATZ1) + (20000 * STEUERSATZ2)
+                    + (20000 * STEUERSATZ3) + ((ohneAbzug - 60000) * 0.4));
+        }
     }
-
-    public String getSchwäche() {
-        return this.schwäche;
-    }
-
     public double getEinkommen() {
-        // TODO Auto-generated method stub
-        return 0;
+        return this.einkommen;
     }
 
+    public String getName() {
+        return this.name;
+   }
 
+    public double steuer() {
+        // TODO Auto-generated method stub
+        return einkommensteuer();
+    }
 }

@@ -1,15 +1,11 @@
 package tpe.oo.metropolis;
 
-public abstract class Einwohner extends Metropolis {
+public abstract class Einwohner {
+    protected String name;
+    protected double einkommen;
 
-   protected String name;
-   private double einkommen;
-
-//   Einwohner(double einkommen) {
-//       this.einkommen = einkommen;
-//   }
-
-   public double getEinkommen() {
-       return this.einkommen;
-   }
+    protected Einwohner(String name, double einkommen) {
+        this.name = name;
+        this.einkommen = einkommen;
+    }
 }

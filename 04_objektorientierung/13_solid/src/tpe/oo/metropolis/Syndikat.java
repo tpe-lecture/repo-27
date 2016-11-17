@@ -1,33 +1,53 @@
 package tpe.oo.metropolis;
 
-public class Syndikat extends Metropolis {
-    private Schurke[] schurken;
-    private String clanName;
-    private double einkommen;
+public class Syndikat implements Koerperschaftsteuerpflichtig {
 
-    public Syndikat(String clanName, Schurke... schurken) {
-        this.clanName = clanName;
-        this.schurken = schurken;
+    protected String name;
+    protected Schurke[] schurken = new Schurke[2]; // this represents the combination between
+    //the class Schurken and the one Syndicat
+
+    public Syndikat(String name) {
+        this.name = name;
     }
 
-    public String[] getSchurkenNamen() {
-        String schurkenNamen[] = new String[schurken.length];
-
-        for (int i = 0; i < schurkenNamen.length; i++) {
-            schurkenNamen[i] = schurken[i].getName();
+    public double koerperschaftsteuer() {
+        double steuer = 0;
+        double summe = 0;
+        for (Schurke s : schurken) {
+            if (s != null) {
+                steuer = steuer + s.einkommensteuer();
+                summe = summe + s.getEinkommen();
+            }
         }
-        return schurkenNamen;
+        return steuer + (summe * STEUERSATZ);
+
     }
 
-    public String clanName() {
-        return this.clanName;
-    }
+    public void setSchurken(Schurke schurke) { // to add a new Schureke into the Syndicate
+        int position = 0;
 
-    public double getEinkommenSumme() {
+        while (true) {
+            if (schurken[schurken.length - 1] != null) { // the array / the syndicate is full
 
-        for (int i = 0; i < schurken.length; i++) {
-            einkommen += schurken[i].getEinkommen();
+                System.out.println("Sorry " + schurke.name + " das Syndikat ist voll");
+                return;
+            }
+
+            if (schurken[position] == null) {
+                System.out.println(schurke.getName() + " " + "Hat sich dem " + this.name + " angeschlossen");
+                schurken[position] = schurke;
+                return; // what is this state "return" used for?
+            }
+
+            position++;
+
         }
-        return einkommen;
+
+    }
+
+    @Override
+    public double steuer() {
+
+        return koerperschaftsteuer();
     }
 }

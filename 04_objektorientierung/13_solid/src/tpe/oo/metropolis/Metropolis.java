@@ -1,29 +1,29 @@
 package tpe.oo.metropolis;
 
-    public class Metropolis { // the metropolis itself.
+public class Metropolis { // the metropolis itself
 
     public static void main(String[] args) {
-           String[] helper = {"Blatt"};
-            Schurke azog = new Schurke("Azog der Schänder",27990.0, "Orkismus", "Wasser");
-            Schurke hanni = new Schurke("Hannibal Lecter", 19910, "Kannibalismus", "Feuer");
-            Schurke ono = new Schurke("Onox", 270201, "Legendismus", "Blatt");
-            Superhelden özi = new Superhelden("Özkan", 270201, helper); // helper has to be first declared
-//           as a String in an array up there.
-            Syndikat sy = new Syndikat("Syndikat der Superschurken" , azog,hanni);
+        // an instance of the class Metropolis
+        Finanzamt f = new Finanzamt();
 
-            Finanzamt fa = new Finanzamt();
+        // here are new inhabitants (schurken)
+        Schurke azog = new Schurke("_Azog der Schänder_", 27990, "_Orkismus_", null);
+        Schurke hannibal = new Schurke("_Hannibal Lecter_", 19910, "_Kannibalismus_", null);
+        Schurke onox = new Schurke("_Onox_", 270201, "_Legendismus_", null);
+//        Schurke onx = new Schurke("_Onx_", 270201, "_Legendismus_", null);
 
-            double d = fa.zahleSteuer(sy);
+        // to create a new syndicate
+        Syndikat syndikat = new Syndikat("Syndikat der Superschurken");
+        syndikat.setSchurken(azog); // azog joins the syndicate
+        syndikat.setSchurken(hannibal); // hannibal joins the syndicate as well
+//        syndikat.setSchurken(onx);
 
-            d += fa.zahleSteuer(azog);
-            d += fa.zahleSteuer(hanni);
-            d += fa.zahleSteuer(ono);
+        f.setSteuerpflichtig(syndikat); // to calculate the taxes of the syndicate*s's members
+        f.setSteuerpflichtig(onox); // taxes of onox
 
-            System.out.println("GesamtSteuer:  " + d);
+        System.out.printf("Gesamte Steuereinnahmen %.2f%n", f.steuer()); // to print out the total
+        // amount of taxes
 
-//            Mutanten a = new Mutanten(); // we have to instance an object of type Metropolis and then
-             Mutanten.kämpfe(özi, azog); // we have to cast that object(a) in type Mutanten because we can't
-                                              // Directly instance an object of type Mutanten.
-
-        }
     }
+
+}
