@@ -22,7 +22,7 @@ package tpe.testate.crypter;
  *    7 -> t
  *  </code>
  *
- *  Aus dem Text "tpe im sose 2016 ist eine super vorlesung" würde nach
+ *  Aus dem Text "tpe im sose 2016 ist eine super vorlesung" w�rde nach
  *  dieser Regel "7p3 im s0s3 2ol6 is7 3in3 sup3r v0r13sung".
  *
  *  Bei der Verschlüsselung sind nur die Zeichen a-z, die Zahlen 0-9 und
