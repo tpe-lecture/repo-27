@@ -6,7 +6,7 @@ import de.smits_net.games.framework.board.MainWindow;
 
 /**
  * Hauptklasse des Spiels.
- */
+ *///
 public class GameMain extends MainWindow {
 
     /**

@@ -9,7 +9,7 @@ import de.smits_net.games.framework.sprite.AnimatedSprite;
 import de.smits_net.games.framework.sprite.Direction;
 
 /**
- * Ein Alien.
+ * Ein Alien.//
  */
 public class Alien extends AnimatedSprite {
 

@@ -13,7 +13,7 @@ import de.smits_net.games.framework.board.Board;
 /**
  * Spielfeld.
  */
-public class GameBoard extends Board {
+public class GameBoard extends Board {//
 
     /** Alien, das durch das Bild läuft. */
     private Alien alien;
