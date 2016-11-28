@@ -1,3 +1,4 @@
+
 # Aufgabe: Static Member Class
 
 ## Lernziel
