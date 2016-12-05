@@ -10,7 +10,7 @@ package tpe.nested.lambda;
 public interface Predicate<T> {
 
     /**
-     * Entscheidet, ob ein Objekt akzeptiert wird oder nicht.
+     * Entscheidet, ob ein Objekt akzeptiert wird oder nicht.jj
      *
      * @param object das zu untersuchende Objekt
      * @return {@code true} wenn das Objekt akzeptiert wird,

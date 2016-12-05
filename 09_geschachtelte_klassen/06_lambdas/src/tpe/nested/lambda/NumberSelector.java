@@ -8,7 +8,7 @@ public class NumberSelector {
     /**
      * Filtert die übergebenen Zahlen anhand des Prädikates.
      *
-     * @param predicate Prädikat.
+     * @param predicate Prädikat. kkk
      * @param numbers die zu filternden Zahlen.
      * @return Das Ergebnis
      */

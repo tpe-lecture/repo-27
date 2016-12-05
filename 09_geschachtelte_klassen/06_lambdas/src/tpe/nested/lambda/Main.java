@@ -14,7 +14,7 @@ public class Main {
     /**
      * Hauptmethode.
      *
-     * @param args Kommandozeileargumente.
+     * @param args Kommandozeileargumente.jj
      */
     public static void main(String[] args) {
 
