@@ -1,15 +1,24 @@
 package tpe.testate.crypter;
 
+/**
+ * Klasse zur Entschlüssung und Verschlüssung von Texten.
+ *
+ * @author nguem
+ *
+ */
 public class CrypterImpl implements Crypter {
 
 	/**
-	 * @param input Text, der verschlüsselt werden soll.
-     * @return Verschlüsselter Text.
+	 * @param input
+	 *            Text, der verschlüsselt werden soll.
+	 * @variable newArray to convert the input text into lower-case and into an
+	 *           array
+	 * @return Verschlüsselter Text.
 	 */
 	@Override
 	public String encrypt(String input) {
 
-		char[] newArray = input.toLowerCase().toCharArray(); //convert the input text into lower-case and into an array
+		char[] newArray = input.toLowerCase().toCharArray();
 
 		String encryptedText = "";
 
@@ -45,19 +54,24 @@ public class CrypterImpl implements Crypter {
 
 				newArray[i] = '7';
 			}
-
-			if((newArray[i] >= 48 && newArray[i] <= 57) || (newArray[i] >= 97 && newArray[i] <= 122) || newArray[i] == 32){ // the input text doesn't contain invalid letters
-			    encryptedText += newArray[i]; // the encrypted text
+			/**
+			 * to check whether the input text doesn't contain invalid letters
+			 */
+			if ((newArray[i] >= 48 && newArray[i] <= 57) || (newArray[i] >= 97 && newArray[i] <= 122)
+					|| newArray[i] == 32) {
+				encryptedText += newArray[i]; // the encrypted text
 			}
 		}
-		return encryptedText; // returns the encrypted text
+		return encryptedText;
 	}
 
 	/**
-	 * @param input Text, der entschlüsselt werden soll.
-     * @return Entschlüsselter Text.
-     * @throws IllegalArgumentException Wird geworfen, wenn die Eingabe
-     *      ungültige Zeichen (Grossbuchstaben) enthält.
+	 * @param input
+	 *            Text, der entschlüsselt werden soll.
+	 * @return Entschlüsselter Text.
+	 * @throws IllegalArgumentException
+	 *             Wird geworfen, wenn die Eingabe ungültige Zeichen
+	 *             (Grossbuchstaben) enthält.
 	 *
 	 */
 	@Override
@@ -66,7 +80,9 @@ public class CrypterImpl implements Crypter {
 		for (int i = 0; i < input.length(); i++) {
 			if (input.charAt(i) < 48 || input.charAt(i) > 122 || (input.charAt(i) > 57 && input.charAt(i) < 97)
 					|| Character.isUpperCase(input.charAt(i))) {
-				throw new IllegalArgumentException(); // throws an exception in case of upper-case or invalid letters
+				throw new IllegalArgumentException(); // throws an exception in
+														// case of upper-case or
+														// invalid letters
 			}
 		}
 		return encrypt(input);
