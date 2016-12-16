@@ -35,6 +35,7 @@ public class CoinGenerator implements Iterable<Sprite> {
     }
 
     /**
+     *
      * Erzeugt einen neuen Iterator.
      *
      * @return Der Iterator.
