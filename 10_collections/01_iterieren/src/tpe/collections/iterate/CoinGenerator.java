@@ -10,7 +10,7 @@ import de.smits_net.games.framework.sprite.Sprite;
 import de.smits_net.games.framework.sprite.Sprite.BoundaryPolicy;
 
 /**
- * Klasse, die eine beliebige Menge an Geld generiert.
+ * Klasse, die eine beliebige Menge an Geld generiert..
  */
 public class CoinGenerator implements Iterable<Sprite> {
 

@@ -11,7 +11,7 @@ import de.smits_net.games.framework.board.Board;
 import de.smits_net.games.framework.sprite.Sprite;
 
 /**
- * Spielfeld.
+ * Spielfeld..
  */
 @SuppressWarnings("serial")
 public class GameBoard extends Board {

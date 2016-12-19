@@ -5,7 +5,7 @@ import java.awt.EventQueue;
 import de.smits_net.games.framework.board.MainWindow;
 
 /**
- * Hauptklasse des Spiels.
+ * Hauptklasse des Spiels..
  */
 public class GameMain extends MainWindow {
 
