@@ -3,7 +3,7 @@ package tpe.testate.crypter;
 /**
  * Klasse zur Entschlüssung und Verschlüssung von Texten.
  *
- * @author nguem.
+ * @author nguem.uzug
  *
  */
 public class CrypterImpl implements Crypter {
